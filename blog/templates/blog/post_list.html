@@ -1,3 +1,14 @@
 <html>
 	<title>Django Tutorial</title>
+	<body>
+		<div>
+			{% for post in posts %}
+				<div>
+					<h1>{{ post.title }}</h1>
+					<p>published: {{ post.published_date }}</p>
+					<p>{{ post.text|linebreaks }}</p>
+				</div>
+			{% endfor %}
+		</div>
+	</body>
 </html>
