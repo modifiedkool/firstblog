@@ -1,0 +1,20 @@
+{% load staticfiles %}
+<html>
+	<head>
+		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+	</head>
+	<div class="header">
+		<h2>Django Learning</h2>
+	</div>
+	{% if user.is_authenticated %}
+		<a href="{% url 'post_new' %}" class="top-menu">Add Post</a>
+	{% endif %}
+	<title>Django Tutorial</title>
+	<body>
+		<div>
+			{% block content %}
+				
+			{% endblock %}
+		</div>
+	</body>
+</html>
